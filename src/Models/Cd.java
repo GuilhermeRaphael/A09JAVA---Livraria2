@@ -32,11 +32,18 @@ public class Cd extends Produto{
 
     @Override
     public void listarProduto() {
-
+        System.out.println("Artista: " + artista);
+        System.out.println("Gravadora: " + gravadora);
+        System.out.println("paisOrigem: "+ paisOrigem);
+        System.out.println("Descrição: "+ getDescricao());
+        System.out.println("Genero: " + getGenero());
+        System.out.println("Estoque disponível: " + getEstoqueDisponivel());
+        System.out.println("Preço Venda: " + getPrecoVenda());
     }
 
     @Override
-    public void calcularPrecoVenda() {
+    public void calcularPrecoVenda()
+    {
         setPrecoVenda(getPrecoCusto() * 1.20);
     }
 }

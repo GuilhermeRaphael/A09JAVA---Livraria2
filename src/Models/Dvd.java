@@ -32,15 +32,23 @@ public class Dvd extends Produto{
 
     @Override
     public void listarProduto() {
-
+        System.out.println("Diretor: " + diretor);
+        System.out.println("Durção: " + duracao);
+        System.out.println("Censura: "+ censura);
+        System.out.println("Descrição: "+ getDescricao());
+        System.out.println("Genero: " + getGenero());
+        System.out.println("Estoque disponível: " + getEstoqueDisponivel());
+        System.out.println("Preço Venda: " + getPrecoVenda());
     }
 
     @Override
-    public void calcularPrecoVenda() {
+    public void calcularPrecoVenda()
+    {
         setPrecoVenda(getPrecoCusto() * 1.30);
     }
 
-    public void calcularPrecoVenda(double cotacaoDolar){
+    public void calcularPrecoVenda(double cotacaoDolar) //sobrecarga de metodo, metodo com mesmo nome mas com metodo diferente
+    {
         setPrecoVenda(getPrecoCusto() * 1.30 * cotacaoDolar);
     }
 

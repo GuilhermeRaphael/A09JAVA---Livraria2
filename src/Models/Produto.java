@@ -8,16 +8,16 @@ public abstract class Produto {
     private double precoVenda;
 
     public void comprar(int qtde){
-
+        estoqueDisponivel += qtde;
     }
 
     public void vender (int qtde){
-
+        estoqueDisponivel -= qtde;
     }
 
-    public abstract void listarProduto();
+    public abstract void listarProduto(); //metodo abstrato nao tem codigo, mas os filhos tem que usar o metodo
 
-    public abstract void calcularPrecoVenda();
+    public abstract void calcularPrecoVenda(); //metodo abstrato nao tem codigo, mas os filhos tem que usar o metodo
 
     public String getDescricao() {
         return descricao;

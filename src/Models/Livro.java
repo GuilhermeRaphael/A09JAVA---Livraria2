@@ -8,12 +8,20 @@ public class Livro extends Produto {
 
     @Override
     public void listarProduto() {
-
+        System.out.println("Autor: " + autor);
+        System.out.println("Editora: " + editora);
+        System.out.println("Edição: "+ edicao);
+        System.out.println("Descrição: "+ getDescricao());
+        System.out.println("Genero: " + getGenero());
+        System.out.println("Estoque disponível: " + getEstoqueDisponivel());
+        System.out.println("Preço Venda: " + getPrecoVenda());
     }
 
+
     @Override
-    public void calcularPrecoVenda() {
-       setPrecoVenda(getPrecoCusto() * 1.15);
+    public void calcularPrecoVenda()
+    {
+        setPrecoVenda(getPrecoCusto() * 1.15);
     }
 
     public String getAutor() {
